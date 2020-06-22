@@ -35,7 +35,7 @@ router.post('/users', async (req, res) => {
             mailOptions.html = `<html>
             <body>
             <h3>Click the link below to verify the account</h3>
-            <button> <a href="http://localhost:3000/verifyaccount/${emailToken}/${user.email}">localhost:3000/verifyaccount/${emailToken}/${user.email}</a></button><br>
+            <button> <a href="https://url-shrinker-auth.herokuapp.com/verifyaccount/${emailToken}/${user.email}">https://url-shrinker-auth.herokuapp.com/verifyaccount/${emailToken}/${user.email}</a></button><br>
             <h3>Link is valid for 1 day</h3>
             </body>
             </html>`
@@ -117,7 +117,7 @@ router.post('/resend-mail', async (req, res) => {
             mailOptions.html = `<html>
             <body>
             <h3>Click the link below to verify the account</h3>
-            <button> <a href="http://localhost:3000/verifyaccount/${emailToken}/${user.email}">localhost:3000/verifyaccount/${emailToken}/${user.email}</a></button><br>
+            <button> <a href="https://url-shrinker-auth.herokuapp.com/verifyaccount/${emailToken}/${user.email}">https://url-shrinker-auth.herokuapp.com/verifyaccount/${emailToken}/${user.email}</a></button><br>
             <h3>Link is valid for 1 day</h3>
             </body>
             </html>`
