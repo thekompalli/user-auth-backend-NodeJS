@@ -31,7 +31,7 @@ router.post('/users', async (req, res) => {
             let buf = crypto.randomBytes(32);
             let emailToken = buf.toString("hex");
             user.emailToken = emailToken;
-            mailOptions.to = user.email;
+            mailOptions.to = `${user.email}`;
             mailOptions.html = `<html>
             <body>
             <h3>Click the link below to verify the account</h3>
