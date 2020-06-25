@@ -31,7 +31,7 @@ router.post('/users', async (req, res) => {
             let buf = crypto.randomBytes(32);
             let emailToken = buf.toString("hex");
             user.emailToken = emailToken;
-            mailOptions.to = `${user.email}`;
+            mailOptions.to = user.email;
             mailOptions.html = `<html>
             <body>
             <h3>Click the link below to verify the account</h3>
@@ -91,7 +91,7 @@ router.get('/verifyaccount/:emailToken/:email', async (req, res) => {
                 <div style = "text-align: center;">
         
                 <h1>Verification Successful</h1>
-                <h3><a href = "https://url-shrinker-krishna.netlify.app/">Click here to continue</a></h3>
+                <h3><a href = "https://user-auth-shrinker-krishna.netlify.app/">Click here to continue</a></h3>
                 
                 </div>
                
@@ -159,7 +159,7 @@ router.post('/forgot-pass', async(req, res) => {
             mailOptions.html = `<html>
             <body>
             <h3>Click the link below to reset your Password</h3>
-            <button> <a href="https://url-shrinker-krishna.netlify.app/pass-reset/${forgotToken}/${user.email}">Reset Password Link</a></button><br>
+            <button> <a href="https://user-auth-shrinker-krishna.netlify.app/pass-reset/${forgotToken}/${user.email}">Reset Password Link</a></button><br>
             <h3>Link is valid for 1 day</h3>
             </body>
             </html>`
