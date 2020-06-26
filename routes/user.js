@@ -116,6 +116,7 @@ router.post('/resend-mail', async (req, res) => {
             mailOptions.to = user.email;
             mailOptions.html = `<html>
             <body>
+            <h1>Link Expired?</h1>
             <h3>Click the link below to verify the account</h3>
             <button> <a href="https://url-shrinker-auth.herokuapp.com/verifyaccount/${emailToken}/${user.email}">https://url-shrinker-auth.herokuapp.com/verifyaccount/${emailToken}/${user.email}</a></button><br>
             <h3>Link is valid for 1 day</h3>
